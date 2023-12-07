@@ -14,7 +14,7 @@ int main() {
 		ground[i] = ground[i + 6] = {dir, len};
 	}
 	
-	for(int i = 3; i < 12; i++){
+	for(int i = 3; i < 10; i++){
 		if(ground[i].first == ground[i - 2].first && ground[i - 1].first == ground[i - 3].first){
 			bigArea = ground[i + 1].second * ground[i + 2].second;
 			smallArea = ground[i - 1].second * ground[i - 2].second;
