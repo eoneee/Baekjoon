@@ -20,8 +20,8 @@ vector<int> solution(vector<string> id_list, vector<string> report, int k) {
     
     vector<string> chk;
     
-    // report 공백기준 두개의 string으로 나누기
-    // 나눠진 report를 연결 리스트로 구성 (중복없이)
+    // report 공백기준 두 개의 string으로 나누기
+    // 나눠진 report를 연결 리스트로 구성 (중복 없이)
     // for(auto i : report){
     for(int i = 0; i < report.size(); i++){
         flag = 0;
@@ -49,7 +49,7 @@ vector<int> solution(vector<string> id_list, vector<string> report, int k) {
     // k 이상일 경우 chk
     for(int i = 0; i < id_list.size(); i++){
         
-        cout << arrCnt[i] << " " << i << "\n";
+        // cout << arrCnt[i] << " " << i << "\n";
         if(arrCnt[i] >= k){
             chk.push_back(id_list[i]);
         }
@@ -67,7 +67,6 @@ vector<int> solution(vector<string> id_list, vector<string> report, int k) {
                     break;
                 }
             }
-            
         }
     }
     return answer;
