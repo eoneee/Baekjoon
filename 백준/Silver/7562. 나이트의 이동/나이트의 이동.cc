@@ -25,7 +25,7 @@ int bfs(int starty, int startx){
 			int nx = x + dx[i];
 			int ny = y + dy[i];
 			
-			if(nx >= 0 && ny >= 0 && nx < len && ny < len && visited[ny][nx] == 0){//&& chess[ny][nx] == 0 && visited[ny][nx] == 0){
+			if(nx >= 0 && ny >= 0 && nx < len && ny < len && visited[ny][nx] == 0){
 				chess[ny][nx] = chess[y][x] + 1;
 				visited[ny][nx] = true;
 				knight.push({ny, nx});
@@ -48,14 +48,7 @@ int main() {
 		memset(chess,0, sizeof(chess));
 		while(!knight.empty())
 			knight.pop();
-		// int result = bfs(a, b);
-		// if(result != -1){
-		// 	cout << result << endl;
-		// }
 		bfs(a, b);
-		// }else{
-		// 	cout << "-1" << endl;
-		// }
 		cout << chess[targetY][targetX] << endl;
 	}
 	return 0;
