@@ -8,7 +8,7 @@ int sec;
 
 int bfs(int starty){
 	if(starty == k){
-		// sec = min(minn, sec);
+		sec = min(minn, sec);
 		return sec;
 	}
 	graph.push(starty);
@@ -20,7 +20,7 @@ int bfs(int starty){
 			int y = graph.front();
 			graph.pop();
 			if(y == k){
-				// sec = min(minn, sec);
+				sec = min(minn, sec);
 				return sec;
 				
 			}
