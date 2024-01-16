@@ -45,7 +45,7 @@ int bfs(){
 		}
 	}
 	cout << days;
-	return days;
+	return 0;
 }
 int main() {
 	cin >> n >> m >> h;
