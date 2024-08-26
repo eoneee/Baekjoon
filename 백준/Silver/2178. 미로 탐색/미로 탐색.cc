@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int MAX = 102;
-bool visited[MAX][MAX];
-int graph[MAX][MAX];
+const int MAXX = 102;
+bool visited[MAXX][MAXX];
+int graph[MAXX][MAXX];
 int dx[4] = {1, 0, -1, 0};
 int dy[4] = {0, 1, 0, -1};
 int cnt;
 int n, m;
 queue<pair<int, int>> maze;
 int bfs(int y, int x){
-	maze.push(make_pair(y, x));
+	maze.push({y, x});
 	visited[y][x] = true;
 	
 	while(!maze.empty()){
@@ -22,7 +22,7 @@ int bfs(int y, int x){
 			if(visited[ny][nx] == false && graph[ny][nx] == 1){
 				visited[ny][nx] = true;
 				graph[ny][nx] = graph[y][x] + 1;
-				maze.push(make_pair(ny, nx));
+				maze.push({ny, nx});
 			}
 		}
 	}
