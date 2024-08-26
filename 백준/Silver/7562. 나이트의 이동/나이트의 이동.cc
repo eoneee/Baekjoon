@@ -5,14 +5,19 @@ int len;
 const int MAXX = 302;
 bool visited[MAXX][MAXX];
 int chess[MAXX][MAXX];
+
 int targetX, targetY;
 queue<pair<int, int>> knight;
+
 int bfs(int starty, int startx){
 	int dx[] = {1, 2, 2, 1, -1, -2, -2, -1};
 	int dy[] = {-2, -1, 1, 2, 2, 1, -1, -2};
+	
 	if (startx == targetX && starty == targetY)
 		return chess[starty][startx];
+	
 	knight.push({starty, startx});
+	
 	chess[starty][startx] = 0;
 	visited[starty][startx] = true;
 
