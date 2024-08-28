@@ -7,7 +7,7 @@ int dx[4] = {1, 0, -1, 0};
 int dy[4] = {0, 1, 0, -1};
 int days;
 int n, m;
-queue<pair<int, int>> tomato; //좌표입력
+queue<pair<int, int>> tomato;
 int bfs(){
 	int x, y;
 	while(!tomato.empty()){
